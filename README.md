@@ -2,13 +2,13 @@
 
 ## 安装和使用
 
-``` npx foms-create-branch ```
+``` npx foms-create-branch -c```
 
 or
 
 ``` npm install -g foms-create-branch```
 
-``` Terminal => foms ```
+``` Terminal => foms -c ```
 
 ## 开发
 
