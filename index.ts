@@ -7,6 +7,7 @@ import {
     BRANCH_TYPE_ARRAY,
     SVS_DEV_TASK_DESC_REG
 } from './consts';
+import type { processProps } from './types';
 (async () => {
   const masterBranch = await prompts({
     type: 'text',
@@ -52,7 +53,7 @@ import {
     validate: (devTaskDesc: string) => SVS_DEV_TASK_DESC_REG.test(devTaskDesc)
   });
 
-  const params = {
+  const params: processProps = {
       ...masterBranch,
       ...branchType,
       ...devTaskNumber,
