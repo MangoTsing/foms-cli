@@ -1,6 +1,6 @@
 {
   "name": "foms-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "foms-cli",
   "main": "index.js",
   "bin": {
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MangoTsing/foms-create-branch.git"
+    "url": "git+https://github.com/MangoTsing/foms-cli.git"
   },
   "author": "yanpeng.shangguan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MangoTsing/foms-create-branch/issues"
+    "url": "https://github.com/MangoTsing/foms-cli/issues"
   },
-  "homepage": "https://github.com/MangoTsing/foms-create-branch#readme",
+  "homepage": "https://github.com/MangoTsing/foms-cli#readme",
   "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^6.1.0",
