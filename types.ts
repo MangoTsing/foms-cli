@@ -4,3 +4,7 @@ export interface processProps {
     devTaskNumber: number;
     devTaskDesc: string;
 }
+
+export interface fomsProps {
+    create?: boolean;
+}
