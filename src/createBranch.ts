@@ -8,8 +8,8 @@ import {
     BRANCH_TYPE_ARRAY,
     SVS_DEV_TASK_DESC_REG
 } from './consts';
-import type { processProps, fomsProps } from './types';
-export const createNewBranch = async (options: fomsProps) => {
+import type { processProps } from './types';
+export const createNewBranch = async () => {
     const masterBranch = await prompts({
         type: 'text',
         name: 'branch',
@@ -76,7 +76,7 @@ export const createNewBranch = async (options: fomsProps) => {
         createLoading.fail();
         return false;
     }
+    createLoading.succeed();
     console.log(symbols.success, chalk.green(`成功创建分支！`));
-    createLoading.succeed()
     return;
 }

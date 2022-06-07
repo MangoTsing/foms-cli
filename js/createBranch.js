@@ -16,7 +16,7 @@ const symbols = require('log-symbols');
 const execSync = require('child_process').execSync;
 const ora = require('ora');
 const consts_1 = require("./consts");
-const createNewBranch = (options) => __awaiter(void 0, void 0, void 0, function* () {
+const createNewBranch = () => __awaiter(void 0, void 0, void 0, function* () {
     const masterBranch = yield prompts({
         type: 'text',
         name: 'branch',
@@ -72,8 +72,8 @@ const createNewBranch = (options) => __awaiter(void 0, void 0, void 0, function*
         createLoading.fail();
         return false;
     }
-    console.log(symbols.success, chalk.green(`成功创建分支！`));
     createLoading.succeed();
+    console.log(symbols.success, chalk.green(`成功创建分支！`));
     return;
 });
 exports.createNewBranch = createNewBranch;

@@ -1,6 +1,6 @@
 export const MASTER_BRANCH_ARRAY = [
     'master',
-    'k8s-uat-live',
+    'master_th',
 ];
 export const BRANCH_TYPE_ARRAY = [
     'feature',

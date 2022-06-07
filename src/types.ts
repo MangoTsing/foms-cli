@@ -7,4 +7,5 @@ export interface processProps {
 
 export interface fomsProps {
     create?: boolean;
+    copybranchname?: boolean;
 }

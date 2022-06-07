@@ -13,14 +13,26 @@ const chalk = require('chalk');
 const symbols = require('log-symbols');
 const { program } = require('commander');
 const createBranch_1 = require("./createBranch");
+const copyBranchName_1 = require("./copyBranchName");
+const packageJson = require('../package.json');
 (() => __awaiter(void 0, void 0, void 0, function* () {
     program
-        .option('-c, --create', 'create new foms branch');
+        .name('foms-cli')
+        .description('Quickly manage your FOMS git repo.')
+        .version(packageJson.version);
+    program
+        .option('-c, --create', 'create new foms branch.');
+    program
+        .option('-cbn, --copybranchname', 'copy current branch name.');
     program.parse(process.argv);
     const options = program.opts();
     if (options.create) {
-        yield (0, createBranch_1.createNewBranch)(options);
+        yield (0, createBranch_1.createNewBranch)();
         return;
     }
-    console.log(symbols.error, chalk.red('其他功能还在开发中...'));
+    if (options.copybranchname) {
+        yield (0, copyBranchName_1.copyBranchName)();
+        return;
+    }
+    console.log(symbols.success, chalk.green('输入 foms -h 查看全部命令.'));
 }))();
